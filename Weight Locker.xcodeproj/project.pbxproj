@@ -15,6 +15,7 @@
 		692B52D2253225BD0067AAE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692B52D0253225BD0067AAE7 /* LaunchScreen.storyboard */; };
 		692B52E025324DD10067AAE7 /* WeightTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52DF25324DD10067AAE7 /* WeightTerm.swift */; };
 		692B52E3253251E90067AAE7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52E2253251E90067AAE7 /* TabBarController.swift */; };
+		692B52E725354F2F0067AAE7 /* AddWeightTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52E625354F2F0067AAE7 /* AddWeightTermViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		692B52D3253225BD0067AAE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		692B52DF25324DD10067AAE7 /* WeightTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTerm.swift; sourceTree = "<group>"; };
 		692B52E2253251E90067AAE7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		692B52E625354F2F0067AAE7 /* AddWeightTermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightTermViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				692B52D3253225BD0067AAE7 /* Info.plist */,
 				692B52DF25324DD10067AAE7 /* WeightTerm.swift */,
 				692B52E2253251E90067AAE7 /* TabBarController.swift */,
+				692B52E625354F2F0067AAE7 /* AddWeightTermViewController.swift */,
 			);
 			path = "Weight Locker";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692B52E725354F2F0067AAE7 /* AddWeightTermViewController.swift in Sources */,
 				692B52CA253225B90067AAE7 /* ViewController.swift in Sources */,
 				692B52C6253225B90067AAE7 /* AppDelegate.swift in Sources */,
 				692B52C8253225B90067AAE7 /* SceneDelegate.swift in Sources */,

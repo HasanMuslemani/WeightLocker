@@ -8,11 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBAction func addWeightTerm(_ sender: Any) {
-        tabBarController?.viewControllers?[0] = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "weightTerm") as UIViewController
-        
-    }
+    
+    //tabBarController?.viewControllers?[0] = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "weightTerm") as UIViewController
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
