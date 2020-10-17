@@ -9,13 +9,15 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-        override func viewDidLoad() {
+    var weightTermTracker: WeightTermTracker!
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
             
-            //let viewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "emptyWeightTerm") as UIViewController
-            
-            //self.setViewControllers([viewController], animated: false)
+        //let viewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "emptyWeightTerm") as UIViewController
+        
+        //self.setViewControllers([viewController], animated: false)
     }
     
 

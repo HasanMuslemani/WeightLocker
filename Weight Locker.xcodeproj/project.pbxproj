@@ -9,20 +9,22 @@
 /* Begin PBXBuildFile section */
 		692B52C6253225B90067AAE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52C5253225B90067AAE7 /* AppDelegate.swift */; };
 		692B52C8253225B90067AAE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52C7253225B90067AAE7 /* SceneDelegate.swift */; };
-		692B52CA253225B90067AAE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52C9253225B90067AAE7 /* ViewController.swift */; };
+		692B52CA253225B90067AAE7 /* EmptyWeightTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52C9253225B90067AAE7 /* EmptyWeightTermViewController.swift */; };
 		692B52CD253225B90067AAE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692B52CB253225B90067AAE7 /* Main.storyboard */; };
 		692B52CF253225BD0067AAE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692B52CE253225BD0067AAE7 /* Assets.xcassets */; };
 		692B52D2253225BD0067AAE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692B52D0253225BD0067AAE7 /* LaunchScreen.storyboard */; };
 		692B52E025324DD10067AAE7 /* WeightTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52DF25324DD10067AAE7 /* WeightTerm.swift */; };
 		692B52E3253251E90067AAE7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52E2253251E90067AAE7 /* TabBarController.swift */; };
 		692B52E725354F2F0067AAE7 /* AddWeightTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52E625354F2F0067AAE7 /* AddWeightTermViewController.swift */; };
+		692B5310253A7B940067AAE7 /* WeightTermTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B530F253A7B940067AAE7 /* WeightTermTracker.swift */; };
+		692B5316253B5DEB0067AAE7 /* WeightTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B5315253B5DEB0067AAE7 /* WeightTermViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		692B52C2253225B90067AAE7 /* Weight Locker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weight Locker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		692B52C5253225B90067AAE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		692B52C7253225B90067AAE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		692B52C9253225B90067AAE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		692B52C9253225B90067AAE7 /* EmptyWeightTermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyWeightTermViewController.swift; sourceTree = "<group>"; };
 		692B52CC253225B90067AAE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		692B52CE253225BD0067AAE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		692B52D1253225BD0067AAE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		692B52DF25324DD10067AAE7 /* WeightTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTerm.swift; sourceTree = "<group>"; };
 		692B52E2253251E90067AAE7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		692B52E625354F2F0067AAE7 /* AddWeightTermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightTermViewController.swift; sourceTree = "<group>"; };
+		692B530F253A7B940067AAE7 /* WeightTermTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTermTracker.swift; sourceTree = "<group>"; };
+		692B5315253B5DEB0067AAE7 /* WeightTermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTermViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +68,16 @@
 			children = (
 				692B52C5253225B90067AAE7 /* AppDelegate.swift */,
 				692B52C7253225B90067AAE7 /* SceneDelegate.swift */,
-				692B52C9253225B90067AAE7 /* ViewController.swift */,
+				692B52C9253225B90067AAE7 /* EmptyWeightTermViewController.swift */,
 				692B52CB253225B90067AAE7 /* Main.storyboard */,
 				692B52CE253225BD0067AAE7 /* Assets.xcassets */,
 				692B52D0253225BD0067AAE7 /* LaunchScreen.storyboard */,
 				692B52D3253225BD0067AAE7 /* Info.plist */,
 				692B52DF25324DD10067AAE7 /* WeightTerm.swift */,
+				692B530F253A7B940067AAE7 /* WeightTermTracker.swift */,
 				692B52E2253251E90067AAE7 /* TabBarController.swift */,
 				692B52E625354F2F0067AAE7 /* AddWeightTermViewController.swift */,
+				692B5315253B5DEB0067AAE7 /* WeightTermViewController.swift */,
 			);
 			path = "Weight Locker";
 			sourceTree = "<group>";
@@ -146,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692B5316253B5DEB0067AAE7 /* WeightTermViewController.swift in Sources */,
+				692B5310253A7B940067AAE7 /* WeightTermTracker.swift in Sources */,
 				692B52E725354F2F0067AAE7 /* AddWeightTermViewController.swift in Sources */,
-				692B52CA253225B90067AAE7 /* ViewController.swift in Sources */,
+				692B52CA253225B90067AAE7 /* EmptyWeightTermViewController.swift in Sources */,
 				692B52C6253225B90067AAE7 /* AppDelegate.swift in Sources */,
 				692B52C8253225B90067AAE7 /* SceneDelegate.swift in Sources */,
 				692B52E3253251E90067AAE7 /* TabBarController.swift in Sources */,

@@ -10,14 +10,14 @@ import Foundation
 class WeightTerm {
     
     var startWeight: Double
-    var endWeight: Double
+    var endWeight: Double?
     var goalWeight: Double
     var startDate: Date
     var endDate: Date
     
-    init(startWeight: Double, endWeight: Double, goalWeight: Double, startDate: Date, endDate: Date) {
+    init(startWeight: Double, goalWeight: Double, startDate: Date, endDate: Date) {
         self.startWeight = startWeight
-        self.endWeight = endWeight
+        self.endWeight = nil
         self.goalWeight = goalWeight
         self.startDate = startDate
         self.endDate = endDate
