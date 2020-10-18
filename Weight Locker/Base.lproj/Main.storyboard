@@ -37,7 +37,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Add Weight Term" image="plus" catalog="system" id="aIs-r6-aS4">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="d4y-S4-fET" kind="show" id="kEd-IH-zOF"/>
+                                <segue destination="d4y-S4-fET" kind="show" identifier="" id="kEd-IH-zOF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -49,7 +49,7 @@
         <!--Add Weight Term-->
         <scene sceneID="hpq-OJ-nok">
             <objects>
-                <viewController id="d4y-S4-fET" customClass="AddWeightTermViewController" customModule="Weight_Locker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addWeightTerm" id="d4y-S4-fET" customClass="AddWeightTermViewController" customModule="Weight_Locker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g6v-0Q-Avx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,27 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNk-j8-lux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1808.6956521739132" y="1005.8035714285713"/>
-        </scene>
-        <!--Terms-->
-        <scene sceneID="ERE-gc-ibJ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vir-FH-Hys" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Terms" image="house" catalog="system" id="ufX-E0-wMM"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mhi-ji-AAe">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.070588235294117646" green="0.4392156862745098" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XGR-4E-uQy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1052" y="813"/>
+            <point key="canvasLocation" x="1961" y="794"/>
         </scene>
     </scenes>
     <resources>

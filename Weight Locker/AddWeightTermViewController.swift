@@ -36,10 +36,38 @@ class AddWeightTermViewController: UIViewController {
         
         //set starting weight in picker view
         weightPicker.selectRow(150, inComponent: 0, animated: false)
+        
+        //if there is already a current weight term then we're here to edit so set all values to current values we have stored
+        if let currentWeightTerm = weightTermTracker.currentWeightTerm {
+            datePicker.date = currentWeightTerm.endDate
+            
+            //make the weight into a string so we can split it
+            let weightString = String(currentWeightTerm.startWeight)
+            //split the weight string so we have the int part and decimal part - Example: 150.2 = [150, 2]
+            let seperatedString = weightString.components(separatedBy: ".")
+            //grab the int part from the weight string and try to cast it into an int otherwise default is 150
+            let weightComponent1 = Int(seperatedString[0]) ?? 150
+            //grab the decimal part from the weight string and try to cast it into an int otherwise default is 2
+            let weightComponent2 = Int(seperatedString[1]) ?? 2
+            
+            //set the rows of the weight picker in our edit weight term view controller
+            weightPicker.selectRow(weightComponent1, inComponent: 0, animated: false)
+            weightPicker.selectRow(getWeightPicker2ndRow(decimalWeight: weightComponent2), inComponent: 1, animated: false)
+            
+        }
+        
     }
     
     //MARK: - Actions
     @IBAction func submitClicked(_ sender: Any) {
+        //row based on component in weight picker view
+        let component1Row = weightPicker.selectedRow(inComponent: 0)
+        let component2Row = weightPicker.selectedRow(inComponent: 1)
+        
+        //grab the value of each row
+        pickerValue1 = pickerData1[component1Row]
+        pickerValue2 = Double("0\(pickerData2[component2Row])")!
+        
         let weight = Double(pickerValue1) + pickerValue2
         let startDate = Date()
         let endDate = datePicker.date
@@ -52,6 +80,23 @@ class AddWeightTermViewController: UIViewController {
                                 
         navigationController?.popViewController(animated: true)
         
+    }
+    
+    //this method will take in the decimal part of a weight and get which row it's at in the weight picker
+    func getWeightPicker2ndRow(decimalWeight: Int) -> Int {
+        switch(decimalWeight) {
+        case 2:
+            return 0
+        case 4:
+            return 1
+        case 6:
+            return 2
+        case 8:
+            return 3
+        default:
+            return 0
+            
+        }
     }
     
 }
@@ -92,16 +137,6 @@ extension AddWeightTermViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         return 75
     }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        //row based on component in picker view
-        let component1Row = weightPicker.selectedRow(inComponent: 0)
-        let component2Row = weightPicker.selectedRow(inComponent: 1)
-        
-        //grab the value of each row
-        pickerValue1 = pickerData1[component1Row]
-        pickerValue2 = Double("0\(pickerData2[component2Row])")!
-        
-    }
+
 }
 
