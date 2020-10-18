@@ -10,7 +10,7 @@
         <!--Weight Term-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="EmptyWeightTermViewController" customModule="Weight_Locker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="emptyWeightTerm" id="BYZ-38-t0r" customClass="EmptyWeightTermViewController" customModule="Weight_Locker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,11 +118,11 @@
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="118.52678571428571"/>
         </scene>
-        <!--Home-->
+        <!--Terms-->
         <scene sceneID="yZe-9f-wTx">
             <objects>
-                <navigationController storyboardIdentifier="emptyWeightTerm" automaticallyAdjustsScrollViewInsets="NO" id="nKQ-J1-obY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="3Tt-yj-Cgz"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nKQ-J1-obY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Terms" image="house" catalog="system" id="3Tt-yj-Cgz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="c5v-0b-9rO">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

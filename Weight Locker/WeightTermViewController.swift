@@ -11,6 +11,11 @@ class WeightTermViewController: UIViewController {
     
     //MARK: - Properties
     var weightTermTracker: WeightTermTracker!
+    var dateFormatter: DateFormatter {
+        let df = DateFormatter()
+        df.dateStyle = .medium
+        return df
+    }
 
     //MARK: - Outlets
     @IBOutlet weak var goalLabel: UILabel!
@@ -22,9 +27,39 @@ class WeightTermViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        //grab the tab bar controller
         guard let tabBarContr = tabBarController as? TabBarController else {return}
+        //set the weight term tracker
         weightTermTracker = tabBarContr.weightTermTracker
         
+        if let weightTerm = weightTermTracker.currentWeightTerm {
+            
+            //create a timer that will run a method when date has passed
+            let timer = Timer(fireAt: weightTerm.endDate, interval: 0, target: self, selector: #selector(checkDatePassed), userInfo: nil, repeats: false)
+            //add the timer to the main run loop so it goes off
+            RunLoop.main.add(timer, forMode: .common)
+        }
+        
+    }
+    
+    @objc func checkDatePassed() {
+        guard let weightTerm = weightTermTracker.currentWeightTerm else {return}
+    
+        //substract 10 seconds from current date for more accurate checks
+        let currentDate = Date().timeIntervalSince1970 - 10
+        
+        if(currentDate < weightTerm.endDate.timeIntervalSince1970) {
+            print("Date passed!!!")
+            
+            //add the weight term to the in progress list
+            weightTermTracker.weightTermsInProgress.append(weightTerm)
+            //reset the weight term
+            weightTermTracker.currentWeightTerm = nil
+            
+            //Switch the screen to be the empty weight term screen
+            navigationController?.viewControllers[0] = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "emptyWeightTerm") as UIViewController
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,10 +69,10 @@ class WeightTermViewController: UIViewController {
         
         guard let weightTerm = currentWeightTerm else {return}
         
-        goalLabel.text = String(weightTerm.goalWeight)
-        weightLabel.text = String(weightTerm.startWeight)
-        startDateLabel.text = weightTerm.startDate.description
-        endDateLabel.text = weightTerm.endDate.description
+        goalLabel.text = String(weightTerm.goalWeight) + " lb"
+        weightLabel.text = String(weightTerm.startWeight) + " lb"
+        startDateLabel.text = dateFormatter.string(from: weightTerm.startDate)
+        endDateLabel.text = dateFormatter.string(from: weightTerm.endDate)
         
     }
 

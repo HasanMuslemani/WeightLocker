@@ -14,8 +14,8 @@ class AddWeightTermViewController: UIViewController {
     var pickerData2: [String] = []
     var weightTermTracker: WeightTermTracker! //we know its safe since we're setting it before coming to this view controller
     //value of the weight picker for components 1 and 2
-    var pickerValue1: Int = 0
-    var pickerValue2: Double = 0.0
+    var pickerValue1: Int = 150
+    var pickerValue2: Double = 0.2
 
     //MARK: - Outlets
     @IBOutlet weak var weightPicker: UIPickerView!
@@ -47,17 +47,9 @@ class AddWeightTermViewController: UIViewController {
         //create the current weight term
         weightTermTracker.currentWeightTerm = WeightTerm(startWeight: weight, goalWeight: 0, startDate: startDate, endDate: endDate)
         
+        //switch the navigation controllers root view controller to be the weight term view controller (previously empty weight term view controller)
         navigationController?.viewControllers[0] = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "weightTerm") as UIViewController
-        
-        //switch the tab controllers weight term screen to be the screen where there is a current weight term (it's currently the empty weight term screen)
-        //tabBarController?.viewControllers?[0] = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "weightTerm") as UIViewController
-        
-        //grab the wieght term view controller from the tab controller
-      //  guard let weightTermVC = tabBarController?.viewControllers?[0] as? WeightTermViewController else {return}
-        
-        //send the weight term view controller our weight term tracker
-        //weightTermVC.weightTermTracker = weightTermTracker
-                        
+                                
         navigationController?.popViewController(animated: true)
         
     }
