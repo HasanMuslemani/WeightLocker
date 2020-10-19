@@ -24,11 +24,19 @@ class EmptyWeightTermViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //make sure the destination is the add weight term view controller
-        guard let addWeightTermVC = segue.destination as? AddWeightTermViewController else {return}
-        
-        //send the weight term tracker to the add weight term view controller
-        addWeightTermVC.weightTermTracker = weightTermTracker
+        if(segue.identifier == "addWeightTermSegue") {
+            //make sure the destination is the add weight term view controller
+            guard let addWeightTermVC = segue.destination as? AddWeightTermViewController else {return}
+            
+            //send the weight term tracker to the add weight term view controller
+            addWeightTermVC.weightTermTracker = weightTermTracker
+        } else if(segue.identifier == "weightTermHistorySegue") {
+            //make sure the destination is the weight term history view controller
+            guard let weightTermHistoryVC = segue.destination as? WeightTermHistoryViewController else {return}
+            
+            //send the weight term tracker to the weight term history view controller
+            weightTermHistoryVC.weightTermTracker = weightTermTracker
+        }
     }
 
 

@@ -18,6 +18,8 @@
 		692B52E725354F2F0067AAE7 /* AddWeightTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52E625354F2F0067AAE7 /* AddWeightTermViewController.swift */; };
 		692B5310253A7B940067AAE7 /* WeightTermTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B530F253A7B940067AAE7 /* WeightTermTracker.swift */; };
 		692B5316253B5DEB0067AAE7 /* WeightTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B5315253B5DEB0067AAE7 /* WeightTermViewController.swift */; };
+		692B531D253D017B0067AAE7 /* WeightTermHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B531C253D017A0067AAE7 /* WeightTermHistoryViewController.swift */; };
+		692B5320253D098B0067AAE7 /* WeightTermCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B531F253D098A0067AAE7 /* WeightTermCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		692B52E625354F2F0067AAE7 /* AddWeightTermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightTermViewController.swift; sourceTree = "<group>"; };
 		692B530F253A7B940067AAE7 /* WeightTermTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTermTracker.swift; sourceTree = "<group>"; };
 		692B5315253B5DEB0067AAE7 /* WeightTermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTermViewController.swift; sourceTree = "<group>"; };
+		692B531C253D017A0067AAE7 /* WeightTermHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTermHistoryViewController.swift; sourceTree = "<group>"; };
+		692B531F253D098A0067AAE7 /* WeightTermCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTermCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				692B52E2253251E90067AAE7 /* TabBarController.swift */,
 				692B52E625354F2F0067AAE7 /* AddWeightTermViewController.swift */,
 				692B5315253B5DEB0067AAE7 /* WeightTermViewController.swift */,
+				692B531C253D017A0067AAE7 /* WeightTermHistoryViewController.swift */,
+				692B531F253D098A0067AAE7 /* WeightTermCell.swift */,
 			);
 			path = "Weight Locker";
 			sourceTree = "<group>";
@@ -153,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				692B5316253B5DEB0067AAE7 /* WeightTermViewController.swift in Sources */,
+				692B531D253D017B0067AAE7 /* WeightTermHistoryViewController.swift in Sources */,
 				692B5310253A7B940067AAE7 /* WeightTermTracker.swift in Sources */,
 				692B52E725354F2F0067AAE7 /* AddWeightTermViewController.swift in Sources */,
 				692B52CA253225B90067AAE7 /* EmptyWeightTermViewController.swift in Sources */,
@@ -160,6 +167,7 @@
 				692B52C8253225B90067AAE7 /* SceneDelegate.swift in Sources */,
 				692B52E3253251E90067AAE7 /* TabBarController.swift in Sources */,
 				692B52E025324DD10067AAE7 /* WeightTerm.swift in Sources */,
+				692B5320253D098B0067AAE7 /* WeightTermCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
