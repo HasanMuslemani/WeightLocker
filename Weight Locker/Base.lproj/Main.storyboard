@@ -146,7 +146,53 @@
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="118.52678571428571"/>
         </scene>
-        <!--Weight Term History View Controller-->
+        <!--Add Current Weight-->
+        <scene sceneID="n1k-4E-Uwg">
+            <objects>
+                <viewController id="P7d-bz-NRv" customClass="AddCurrentWeightViewController" customModule="Weight_Locker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rTs-C8-fDc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btO-dn-rQt">
+                                <rect key="frame" x="30" y="50" width="393" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLW-4H-0vP">
+                                <rect key="frame" x="50" y="466" width="314" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.27450980390000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2yP-S8-5cK"/>
+                                </constraints>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitClicked:" destination="P7d-bz-NRv" eventType="touchUpInside" id="yGU-Ys-8gm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6h4-Bp-Wjy"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.92156862750000001" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="btO-dn-rQt" firstAttribute="leading" secondItem="rTs-C8-fDc" secondAttribute="leading" constant="30" id="DgM-Vf-31Q"/>
+                            <constraint firstItem="6h4-Bp-Wjy" firstAttribute="trailing" secondItem="btO-dn-rQt" secondAttribute="trailing" constant="30" id="Hh7-CE-VQX"/>
+                            <constraint firstItem="btO-dn-rQt" firstAttribute="top" secondItem="6h4-Bp-Wjy" secondAttribute="top" constant="50" id="PqO-ri-7rF"/>
+                            <constraint firstItem="qLW-4H-0vP" firstAttribute="leading" secondItem="6h4-Bp-Wjy" secondAttribute="leading" constant="50" id="TIQ-Xv-bqn"/>
+                            <constraint firstItem="6h4-Bp-Wjy" firstAttribute="trailing" secondItem="qLW-4H-0vP" secondAttribute="trailing" constant="50" id="aR5-vg-hS4"/>
+                            <constraint firstItem="qLW-4H-0vP" firstAttribute="top" secondItem="btO-dn-rQt" secondAttribute="bottom" constant="200" id="fwM-dC-plM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Current Weight" id="9pa-12-XKC"/>
+                    <connections>
+                        <outlet property="submitButton" destination="qLW-4H-0vP" id="AdY-FS-Y6c"/>
+                        <outlet property="weightPicker" destination="btO-dn-rQt" id="W5j-Y1-wvS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdH-d4-llS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183" y="832"/>
+        </scene>
+        <!--Weight Term History-->
         <scene sceneID="HGK-so-LvX">
             <objects>
                 <tableViewController storyboardIdentifier="weightTermHistory" id="kr5-yK-ZqQ" customClass="WeightTermHistoryViewController" customModule="Weight_Locker" customModuleProvider="target" sceneMemberID="viewController">
@@ -250,6 +296,7 @@
                                     <outlet property="endDateLabel" destination="gkn-5Q-v7m" id="i01-Vc-zvJ"/>
                                     <outlet property="startDateLabel" destination="nQd-z0-Cez" id="Tfa-MQ-OyF"/>
                                     <outlet property="weightDifferenceLabel" destination="7ey-CW-oh5" id="svC-p3-YfM"/>
+                                    <segue destination="P7d-bz-NRv" kind="show" id="icF-A0-j5M"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -258,7 +305,7 @@
                             <outlet property="delegate" destination="kr5-yK-ZqQ" id="EK8-dM-RZE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WyU-kd-cxf"/>
+                    <navigationItem key="navigationItem" title="Weight Term History" id="WyU-kd-cxf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDx-Nf-aTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

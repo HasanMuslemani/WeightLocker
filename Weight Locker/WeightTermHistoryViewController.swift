@@ -11,13 +11,26 @@ class WeightTermHistoryViewController: UITableViewController {
     
     //MARK: - Properties
     var weightTermTracker: WeightTermTracker!
+    var weightTermIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationVC = segue.destination as? AddCurrentWeightViewController else {return}
+        
+        destinationVC.weightTermTracker = weightTermTracker
+        destinationVC.weightTermIndex = weightTermIndex
+    }
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -82,6 +95,10 @@ class WeightTermHistoryViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        weightTermIndex = indexPath.row
     }
 
 }
