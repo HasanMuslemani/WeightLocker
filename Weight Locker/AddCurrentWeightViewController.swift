@@ -49,7 +49,7 @@ class AddCurrentWeightViewController: UIViewController {
         
         let weight = Double(pickerValue1) + pickerValue2
         
-        print("Row: \(weightTermIndex)")
+        print("Row: \(weightTermIndex!)")
         
         weightTermTracker.weightTermsInProgress[weightTermIndex].endWeight = weight
         
