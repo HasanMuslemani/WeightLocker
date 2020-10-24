@@ -30,6 +30,7 @@ class WeightTermHistoryViewController: UITableViewController {
         
         let index = tableView.indexPathForSelectedRow?.row
         destinationVC.weightTermIndex = index
+        
     }
     
     // MARK: - Table view data source
@@ -78,13 +79,14 @@ class WeightTermHistoryViewController: UITableViewController {
             let weightTerm = weightTermTracker.allWeightTerms[indexPath.row]
             let weightDifference = weightTerm.endWeight! - weightTerm.startWeight
             
-            cell.weightDifferenceLabel.text = String(weightDifference)
+            cell.weightDifferenceLabel.text = String(weightDifference) + " lb"
             var textColor: UIColor = .gray
             
             if(weightDifference > 0) {
-                textColor = .green
-            } else if(weightDifference < 0) {
+                cell.weightDifferenceLabel.text = "+" + cell.weightDifferenceLabel.text!
                 textColor = .red
+            } else if(weightDifference < 0) {
+                textColor = .systemGreen
             }
             
             cell.weightDifferenceLabel.textColor = textColor

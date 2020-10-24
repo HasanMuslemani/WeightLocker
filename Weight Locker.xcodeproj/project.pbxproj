@@ -21,6 +21,9 @@
 		692B531D253D017B0067AAE7 /* WeightTermHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B531C253D017A0067AAE7 /* WeightTermHistoryViewController.swift */; };
 		692B5320253D098B0067AAE7 /* WeightTermCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B531F253D098A0067AAE7 /* WeightTermCell.swift */; };
 		692B5324253D24910067AAE7 /* AddCurrentWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B5323253D24910067AAE7 /* AddCurrentWeightViewController.swift */; };
+		692B534B254495660067AAE7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B534A254495650067AAE7 /* Photo.swift */; };
+		692B5358254497E20067AAE7 /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B5357254497E20067AAE7 /* PhotosTableViewController.swift */; };
+		692B535B254499090067AAE7 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B535A254499090067AAE7 /* PhotoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		692B531C253D017A0067AAE7 /* WeightTermHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTermHistoryViewController.swift; sourceTree = "<group>"; };
 		692B531F253D098A0067AAE7 /* WeightTermCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTermCell.swift; sourceTree = "<group>"; };
 		692B5323253D24910067AAE7 /* AddCurrentWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCurrentWeightViewController.swift; sourceTree = "<group>"; };
+		692B534A254495650067AAE7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		692B5357254497E20067AAE7 /* PhotosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
+		692B535A254499090067AAE7 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,23 +78,82 @@
 		692B52C4253225B90067AAE7 /* Weight Locker */ = {
 			isa = PBXGroup;
 			children = (
-				692B52C5253225B90067AAE7 /* AppDelegate.swift */,
-				692B52C7253225B90067AAE7 /* SceneDelegate.swift */,
-				692B52C9253225B90067AAE7 /* EmptyWeightTermViewController.swift */,
+				692B53522544968B0067AAE7 /* Delegates */,
+				692B5350254496270067AAE7 /* TableViewCells */,
+				692B534F2544961C0067AAE7 /* TabBarControllers */,
+				692B534E254496100067AAE7 /* ViewControllers */,
+				692B534D254496060067AAE7 /* Classes */,
 				692B52CB253225B90067AAE7 /* Main.storyboard */,
 				692B52CE253225BD0067AAE7 /* Assets.xcassets */,
 				692B52D0253225BD0067AAE7 /* LaunchScreen.storyboard */,
 				692B52D3253225BD0067AAE7 /* Info.plist */,
+			);
+			path = "Weight Locker";
+			sourceTree = "<group>";
+		};
+		692B534D254496060067AAE7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
 				692B52DF25324DD10067AAE7 /* WeightTerm.swift */,
 				692B530F253A7B940067AAE7 /* WeightTermTracker.swift */,
+				692B534A254495650067AAE7 /* Photo.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		692B534E254496100067AAE7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				692B5354254496C90067AAE7 /* WeightTerms */,
+				692B5355254496ED0067AAE7 /* Photos */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		692B534F2544961C0067AAE7 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
 				692B52E2253251E90067AAE7 /* TabBarController.swift */,
-				692B5315253B5DEB0067AAE7 /* WeightTermViewController.swift */,
+			);
+			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		692B5350254496270067AAE7 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
 				692B531F253D098A0067AAE7 /* WeightTermCell.swift */,
+				692B535A254499090067AAE7 /* PhotoTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		692B53522544968B0067AAE7 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				692B52C5253225B90067AAE7 /* AppDelegate.swift */,
+				692B52C7253225B90067AAE7 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		692B5354254496C90067AAE7 /* WeightTerms */ = {
+			isa = PBXGroup;
+			children = (
+				692B52C9253225B90067AAE7 /* EmptyWeightTermViewController.swift */,
+				692B5315253B5DEB0067AAE7 /* WeightTermViewController.swift */,
 				692B52E625354F2F0067AAE7 /* AddWeightTermViewController.swift */,
 				692B531C253D017A0067AAE7 /* WeightTermHistoryViewController.swift */,
 				692B5323253D24910067AAE7 /* AddCurrentWeightViewController.swift */,
 			);
-			path = "Weight Locker";
+			path = WeightTerms;
+			sourceTree = "<group>";
+		};
+		692B5355254496ED0067AAE7 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				692B5357254497E20067AAE7 /* PhotosTableViewController.swift */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,8 +226,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692B535B254499090067AAE7 /* PhotoTableViewCell.swift in Sources */,
+				692B534B254495660067AAE7 /* Photo.swift in Sources */,
 				692B5316253B5DEB0067AAE7 /* WeightTermViewController.swift in Sources */,
 				692B531D253D017B0067AAE7 /* WeightTermHistoryViewController.swift in Sources */,
+				692B5358254497E20067AAE7 /* PhotosTableViewController.swift in Sources */,
 				692B5310253A7B940067AAE7 /* WeightTermTracker.swift in Sources */,
 				692B52E725354F2F0067AAE7 /* AddWeightTermViewController.swift in Sources */,
 				692B52CA253225B90067AAE7 /* EmptyWeightTermViewController.swift in Sources */,

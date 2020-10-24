@@ -371,22 +371,45 @@
             </objects>
             <point key="canvasLocation" x="1961" y="833"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Photos-->
         <scene sceneID="QOA-0r-Ey5">
             <objects>
-                <tableViewController id="qqh-dE-RCo" sceneMemberID="viewController">
+                <tableViewController id="qqh-dE-RCo" customClass="PhotosTableViewController" customModule="Weight_Locker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lUq-S2-xe7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.92156862750000001" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Pah-Mb-DUc">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="152" id="Pah-Mb-DUc" customClass="PhotoTableViewCell" customModule="Weight_Locker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="152"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pah-Mb-DUc" id="VfA-kx-Nz5">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="152"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XZa-W8-IqT">
+                                            <rect key="frame" x="35" y="53.5" width="50" height="45.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="lHE-fd-D1i"/>
+                                                <constraint firstAttribute="width" constant="50" id="uFQ-hF-Z8a"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 15, 2020" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBt-wX-rvp">
+                                            <rect key="frame" x="235" y="65.5" width="139" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="PBt-wX-rvp" firstAttribute="centerY" secondItem="VfA-kx-Nz5" secondAttribute="centerY" id="CnG-O0-yem"/>
+                                        <constraint firstItem="PBt-wX-rvp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="XZa-W8-IqT" secondAttribute="trailing" constant="150" id="Gve-G0-Zds"/>
+                                        <constraint firstItem="XZa-W8-IqT" firstAttribute="centerY" secondItem="VfA-kx-Nz5" secondAttribute="centerY" id="OS3-kT-zwS"/>
+                                        <constraint firstItem="XZa-W8-IqT" firstAttribute="leading" secondItem="VfA-kx-Nz5" secondAttribute="leadingMargin" constant="15" id="rb6-jo-VCG"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="PBt-wX-rvp" secondAttribute="trailing" constant="20" id="vcc-pF-811"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.92156862750000001" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -394,11 +417,30 @@
                             <outlet property="delegate" destination="qqh-dE-RCo" id="7dR-BZ-fe0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="7v5-d4-a43"/>
+                    <navigationItem key="navigationItem" title="Photos" id="7v5-d4-a43">
+                        <barButtonItem key="rightBarButtonItem" title="Add Photo" image="plus" catalog="system" id="VBA-lT-cTb">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Za6-xZ-ScY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1961" y="-573"/>
+            <point key="canvasLocation" x="1960.8695652173915" y="-573.21428571428567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9ON-fm-XSu">
+            <objects>
+                <viewController id="OU5-i3-3WC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rov-dN-diK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="h1A-FG-Nag"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Usi-fe-bRC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2699" y="-573"/>
         </scene>
         <!--Item-->
         <scene sceneID="sxu-Zb-QFz">
@@ -409,6 +451,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JlW-8h-QBt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.070588235289999995" green="0.43921568630000002" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -422,6 +468,7 @@
     </scenes>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="text.badge.checkmark" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
