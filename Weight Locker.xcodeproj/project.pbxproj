@@ -24,6 +24,7 @@
 		692B534B254495660067AAE7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B534A254495650067AAE7 /* Photo.swift */; };
 		692B5358254497E20067AAE7 /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B5357254497E20067AAE7 /* PhotosTableViewController.swift */; };
 		692B535B254499090067AAE7 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B535A254499090067AAE7 /* PhotoTableViewCell.swift */; };
+		692B535E25449F850067AAE7 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B535D25449F850067AAE7 /* AddPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		692B534A254495650067AAE7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		692B5357254497E20067AAE7 /* PhotosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
 		692B535A254499090067AAE7 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		692B535D25449F850067AAE7 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				692B5357254497E20067AAE7 /* PhotosTableViewController.swift */,
+				692B535D25449F850067AAE7 /* AddPhotoViewController.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				692B5358254497E20067AAE7 /* PhotosTableViewController.swift in Sources */,
 				692B5310253A7B940067AAE7 /* WeightTermTracker.swift in Sources */,
 				692B52E725354F2F0067AAE7 /* AddWeightTermViewController.swift in Sources */,
+				692B535E25449F850067AAE7 /* AddPhotoViewController.swift in Sources */,
 				692B52CA253225B90067AAE7 /* EmptyWeightTermViewController.swift in Sources */,
 				692B52C6253225B90067AAE7 /* AppDelegate.swift in Sources */,
 				692B5324253D24910067AAE7 /* AddCurrentWeightViewController.swift in Sources */,

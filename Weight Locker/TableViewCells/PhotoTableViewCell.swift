@@ -8,7 +8,11 @@
 import UIKit
 
 class PhotoTableViewCell: UITableViewCell {
-
+    
+    //MARK: - Outlets
+    @IBOutlet weak var photo: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
