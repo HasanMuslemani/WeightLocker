@@ -9,11 +9,11 @@ import Foundation
 
 
 class Photo {
-    var imagePath: String
+    var imageName: String
     var date: Date
     
-    init(imagePath: String, date: Date) {
-        self.imagePath = imagePath
+    init(imageName: String, date: Date) {
+        self.imageName = imageName
         self.date = date
     }
 }

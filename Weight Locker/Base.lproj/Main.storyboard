@@ -440,10 +440,49 @@
                     <view key="view" contentMode="scaleToFill" id="Rov-dN-diK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="h1a-Xg-Jzb">
+                                <rect key="frame" x="50" y="139" width="314" height="247.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="r3U-nF-hW0"/>
+                                </constraints>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="ifu-xr-qk9">
+                                <rect key="frame" x="15" y="438" width="414" height="216"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jy-01-0Va">
+                                <rect key="frame" x="100" y="689" width="214" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.27450980390000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kg6-yW-BSj"/>
+                                </constraints>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitClicked:" destination="d4y-S4-fET" eventType="touchUpInside" id="LCH-KB-GaC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="h1A-FG-Nag"/>
                         <color key="backgroundColor" red="0.86666666670000003" green="0.92156862750000001" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ifu-xr-qk9" firstAttribute="leading" secondItem="h1A-FG-Nag" secondAttribute="leading" constant="15" id="5nH-IL-M3H"/>
+                            <constraint firstItem="ifu-xr-qk9" firstAttribute="trailing" secondItem="h1A-FG-Nag" secondAttribute="trailing" constant="15" id="7T1-eC-6pn"/>
+                            <constraint firstItem="ifu-xr-qk9" firstAttribute="top" secondItem="h1a-Xg-Jzb" secondAttribute="bottom" constant="50" id="IJ8-lu-QwY"/>
+                            <constraint firstItem="h1A-FG-Nag" firstAttribute="trailing" secondItem="1Jy-01-0Va" secondAttribute="trailing" constant="100" id="Iy6-Xs-2LY"/>
+                            <constraint firstItem="h1A-FG-Nag" firstAttribute="trailing" secondItem="h1a-Xg-Jzb" secondAttribute="trailing" constant="50" id="WWB-y9-WUY"/>
+                            <constraint firstItem="h1a-Xg-Jzb" firstAttribute="leading" secondItem="h1A-FG-Nag" secondAttribute="leading" constant="50" id="dLB-zu-nUb"/>
+                            <constraint firstItem="1Jy-01-0Va" firstAttribute="top" secondItem="ifu-xr-qk9" secondAttribute="bottom" constant="35" id="f2D-fs-VMc"/>
+                            <constraint firstItem="1Jy-01-0Va" firstAttribute="leading" secondItem="h1A-FG-Nag" secondAttribute="leading" constant="100" id="qQj-74-fOY"/>
+                            <constraint firstItem="h1a-Xg-Jzb" firstAttribute="top" secondItem="h1A-FG-Nag" secondAttribute="top" constant="50" id="uke-F1-aYR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Photo" id="sMz-dL-DSZ"/>
+                    <connections>
+                        <outlet property="datePicker" destination="ifu-xr-qk9" id="OJP-Wg-Mq5"/>
+                        <outlet property="image" destination="h1a-Xg-Jzb" id="weY-O9-dfk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usi-fe-bRC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -478,6 +517,7 @@
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="text.badge.checkmark" catalog="system" width="128" height="109"/>
     </resources>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		690AFC20254A14E3003967E3 /* PhotoTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690AFC1F254A14E3003967E3 /* PhotoTracker.swift */; };
 		692B52C6253225B90067AAE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52C5253225B90067AAE7 /* AppDelegate.swift */; };
 		692B52C8253225B90067AAE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52C7253225B90067AAE7 /* SceneDelegate.swift */; };
 		692B52CA253225B90067AAE7 /* EmptyWeightTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52C9253225B90067AAE7 /* EmptyWeightTermViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		690AFC1F254A14E3003967E3 /* PhotoTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTracker.swift; sourceTree = "<group>"; };
 		692B52C2253225B90067AAE7 /* Weight Locker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weight Locker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		692B52C5253225B90067AAE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		692B52C7253225B90067AAE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				692B52DF25324DD10067AAE7 /* WeightTerm.swift */,
 				692B530F253A7B940067AAE7 /* WeightTermTracker.swift */,
 				692B534A254495650067AAE7 /* Photo.swift */,
+				690AFC1F254A14E3003967E3 /* PhotoTracker.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				692B535B254499090067AAE7 /* PhotoTableViewCell.swift in Sources */,
 				692B534B254495660067AAE7 /* Photo.swift in Sources */,
 				692B5316253B5DEB0067AAE7 /* WeightTermViewController.swift in Sources */,
+				690AFC20254A14E3003967E3 /* PhotoTracker.swift in Sources */,
 				692B531D253D017B0067AAE7 /* WeightTermHistoryViewController.swift in Sources */,
 				692B5358254497E20067AAE7 /* PhotosTableViewController.swift in Sources */,
 				692B5310253A7B940067AAE7 /* WeightTermTracker.swift in Sources */,
