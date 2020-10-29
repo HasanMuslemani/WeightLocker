@@ -8,15 +8,30 @@
 import UIKit
 
 class PhotosTableViewController: UITableViewController {
+    
+    //MARK: - Properties
+    var photoTracker: PhotoTracker!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //get the tab bar controller
+        guard let tabBarContr = tabBarController as? TabBarController else {return}
+        
+        photoTracker = tabBarContr.photoTracker
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let addPhotoVC = segue.destination as? AddPhotoViewController else {return}
+        
+        addPhotoVC.photoTracker = photoTracker
     }
 
     // MARK: - Table view data source
@@ -26,14 +41,36 @@ class PhotosTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return photoTracker.photos.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! PhotoTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as? PhotoTableViewCell else {
+            fatalError("Unable to dequeue Photo cell")
+        }
 
+        //grab the photos list from the photo tracker
+        let photos = photoTracker.photos
+        //get the current photo in the list
+        let photo = photos[indexPath.row]
         
+        //create a date formatter
+        var dateFormatter: DateFormatter {
+            let df = DateFormatter()
+            df.dateStyle = .medium
+            return df
+        }
+        
+        //set the date label to the photos formatted date
+        cell.dateLabel.text = dateFormatter.string(from: photo.date)
+        
+        //get the image's path - documentDirectory/imageID (using method to grab document directory from the AddPhotoViewController class)
+        let imagePath = AddPhotoViewController().getDocumentsDirectory().appendingPathComponent(photo.imageName)
+        
+        //set the cell's image to be the photo's image by creating a new image from our image's path
+        cell.photo.image = UIImage(contentsOfFile: imagePath.path)
+        cell.photo.layer.cornerRadius = 3
 
         return cell
     }

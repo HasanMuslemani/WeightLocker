@@ -10,6 +10,7 @@ import UIKit
 class TabBarController: UITabBarController {
     
     var weightTermTracker: WeightTermTracker!
+    var photoTracker: PhotoTracker!
     
     override func viewDidLoad() {
         super.viewDidLoad()

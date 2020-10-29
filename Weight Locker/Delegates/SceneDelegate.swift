@@ -21,6 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let tabBarController = window?.rootViewController as? TabBarController else {return}
         
         tabBarController.weightTermTracker = WeightTermTracker()
+        
+        tabBarController.photoTracker = PhotoTracker()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

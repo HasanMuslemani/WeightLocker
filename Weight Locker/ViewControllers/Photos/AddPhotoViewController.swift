@@ -12,6 +12,7 @@ class AddPhotoViewController: UIViewController {
     //MARK: - Properties
     var imagePicker = UIImagePickerController()
     var imageName = ""
+    var photoTracker: PhotoTracker!
     
     //MARK: - Outlets
     @IBOutlet weak var image: UIImageView!
@@ -30,6 +31,21 @@ class AddPhotoViewController: UIViewController {
         image.addGestureRecognizer(tapGestureRecognizer)
     }
     
+    //MARK: - Actions
+    @IBAction func submitClicked(_ sender: Any) {
+        //get the date from the date picker
+        let date = datePicker.date
+        
+        //create the photo
+        let photo = Photo(imageName: imageName, date: date)
+        
+        //add the photo to our list of photos
+        photoTracker.photos.append(photo)
+        
+        navigationController?.popViewController(animated: true)
+    }
+    
+    //MARK: - Methods
     @objc func imageTapped() {
         //set the picker to open the device's photo library
         imagePicker.sourceType = .photoLibrary
@@ -38,7 +54,6 @@ class AddPhotoViewController: UIViewController {
         //open the photo library
         present(imagePicker, animated: true, completion: nil)
     }
-
 }
 
 extension AddPhotoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
