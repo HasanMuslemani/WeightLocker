@@ -29,9 +29,19 @@ class PhotosTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let addPhotoVC = segue.destination as? AddPhotoViewController else {return}
-        
-        addPhotoVC.photoTracker = photoTracker
+        if(segue.identifier == "addPhoto") {
+            guard let addPhotoVC = segue.destination as? AddPhotoViewController else {return}
+            
+            //pass the photo tracker to the add photo view controller
+            addPhotoVC.photoTracker = photoTracker
+        } else if(segue.identifier == "viewPhoto") {
+            guard let photoVC = segue.destination as? PhotoViewController else {return}
+            
+            //pass the photo to the photo view controller
+            if let row = tableView.indexPathForSelectedRow?.row {
+                photoVC.photo = photoTracker.photos[row]
+            }
+        }
     }
 
     // MARK: - Table view data source
