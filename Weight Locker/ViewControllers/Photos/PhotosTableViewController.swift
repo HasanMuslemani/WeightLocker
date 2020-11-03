@@ -85,9 +85,19 @@ class PhotosTableViewController: UITableViewController {
         return cell
     }
     
+    //MARK: - TableView Delegate
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        //checks if the user is trying to delete
+        if(editingStyle == .delete) {
+            //remove the photo from our tracker and table view
+            photoTracker.photos.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 
 }
