@@ -197,7 +197,7 @@
         <!--BMI Calculator-->
         <scene sceneID="JAt-Gb-K1u">
             <objects>
-                <viewController id="t3k-1D-FPY" sceneMemberID="viewController">
+                <viewController id="t3k-1D-FPY" customClass="BMICalculatorViewController" customModule="Weight_Locker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aPA-7R-Qwd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,18 +208,27 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5vJ-Pf-x1P">
-                                <rect key="frame" x="263" y="192.5" width="131" height="32"/>
+                                <rect key="frame" x="269" y="192.5" width="125" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="NOa-wo-dgi"/>
+                                </constraints>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="in"/>
+                                    <segment title="cm"/>
                                 </segments>
+                                <connections>
+                                    <action selector="heightTypeChanged:" destination="t3k-1D-FPY" eventType="valueChanged" id="uP4-8c-O7B"/>
+                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="47o-M9-SOy">
-                                <rect key="frame" x="263" y="305.5" width="131" height="32"/>
+                                <rect key="frame" x="269" y="305.5" width="125" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="lb"/>
+                                    <segment title="kg"/>
                                 </segments>
+                                <connections>
+                                    <action selector="weightTypeChanged:" destination="t3k-1D-FPY" eventType="valueChanged" id="D3H-jG-vCS"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE0-kZ-9Dg">
                                 <rect key="frame" x="45" y="255" width="83.5" height="29"/>
@@ -283,6 +292,9 @@
                                 <state key="normal" title="Calculate">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="calculateBMI:" destination="t3k-1D-FPY" eventType="touchUpInside" id="f1e-5k-cvP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Pw-G9-tBq"/>
@@ -301,6 +313,7 @@
                             <constraint firstItem="gpK-F2-eUD" firstAttribute="width" secondItem="1O5-2i-p0K" secondAttribute="width" id="PUT-8g-L24"/>
                             <constraint firstItem="3Pw-G9-tBq" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0Mc-N4-qmx" secondAttribute="trailing" constant="100" id="UG2-DC-cdU"/>
                             <constraint firstItem="3Pw-G9-tBq" firstAttribute="trailing" secondItem="5vJ-Pf-x1P" secondAttribute="trailing" constant="20" id="W3B-si-crF"/>
+                            <constraint firstItem="47o-M9-SOy" firstAttribute="width" secondItem="5vJ-Pf-x1P" secondAttribute="width" id="YMU-db-f1Q"/>
                             <constraint firstItem="pS9-Dt-pzM" firstAttribute="leading" secondItem="3Pw-G9-tBq" secondAttribute="leading" constant="10" id="bHh-CY-Doz"/>
                             <constraint firstItem="s1d-pm-4HO" firstAttribute="top" secondItem="gpK-F2-eUD" secondAttribute="bottom" constant="50" id="hKU-Cl-Dzu"/>
                             <constraint firstItem="3Pw-G9-tBq" firstAttribute="trailing" secondItem="s1d-pm-4HO" secondAttribute="trailing" constant="100" id="kTI-Ta-457"/>
@@ -314,6 +327,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BMI Calculator" id="M0C-my-x2X"/>
+                    <connections>
+                        <outlet property="calculateButton" destination="s1d-pm-4HO" id="vYR-3d-33I"/>
+                        <outlet property="heightInput" destination="1O5-2i-p0K" id="6mL-Uz-jSf"/>
+                        <outlet property="heightSegment" destination="5vJ-Pf-x1P" id="oTJ-oO-HqZ"/>
+                        <outlet property="resultAmount" destination="Zbt-8P-ZOv" id="vfo-7i-4Xg"/>
+                        <outlet property="resultColour" destination="dtk-YR-30A" id="MV0-sw-yPN"/>
+                        <outlet property="resultType" destination="sdt-f6-ilo" id="WAe-IR-6Lq"/>
+                        <outlet property="weightInput" destination="gpK-F2-eUD" id="l8G-8V-ktQ"/>
+                        <outlet property="weightSegment" destination="47o-M9-SOy" id="kUc-rv-gka"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbd-Qd-cGV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
