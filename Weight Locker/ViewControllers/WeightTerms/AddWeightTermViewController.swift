@@ -13,6 +13,7 @@ class AddWeightTermViewController: UIViewController {
     var pickerData1: [Int] = []
     var pickerData2: [String] = []
     var weightTermTracker: WeightTermTracker! //we know its safe since we're setting it before coming to this view controller
+    var coreDataManager: CoreDataManager!
     //value of the weight picker for components 1 and 2
     var pickerValue1: Int = 150
     var pickerValue2: Double = 0.2
@@ -72,8 +73,23 @@ class AddWeightTermViewController: UIViewController {
         let startDate = Date()
         let endDate = datePicker.date
         
+        var weightTerm = weightTermTracker.currentWeightTerm
+        
+        if let _ = weightTerm {}
+        else {
+            weightTerm = WeightTerm(context: coreDataManager.managedContext)
+        }
+        
         //create the current weight term
-        weightTermTracker.currentWeightTerm = WeightTerm(startWeight: weight, goalWeight: 0, startDate: startDate, endDate: endDate)
+        weightTerm!.startWeight = weight
+        weightTerm!.endWeight = -1
+        weightTerm!.goalWeight = 0
+        weightTerm!.startDate = startDate
+        weightTerm!.endDate = endDate
+        weightTerm!.isCurrent = true
+        weightTermTracker.currentWeightTerm = weightTerm
+        
+        coreDataManager.saveContext()
         
         //switch the navigation controllers root view controller to be the weight term view controller (previously empty weight term view controller)
         navigationController?.viewControllers[0] = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "weightTerm") as UIViewController

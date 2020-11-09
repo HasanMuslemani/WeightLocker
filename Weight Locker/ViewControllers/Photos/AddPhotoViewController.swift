@@ -13,6 +13,7 @@ class AddPhotoViewController: UIViewController {
     var imagePicker = UIImagePickerController()
     var imageName = ""
     var photoTracker: PhotoTracker!
+    var coreDataManager: CoreDataManager!
     
     //MARK: - Outlets
     @IBOutlet weak var image: UIImageView!
@@ -37,7 +38,11 @@ class AddPhotoViewController: UIViewController {
         let date = datePicker.date
         
         //create the photo
-        let photo = Photo(imageName: imageName, date: date)
+        let photo = Photo(context: coreDataManager.managedContext)
+        photo.imageName = imageName
+        photo.date = date
+        
+        coreDataManager.saveContext()
         
         //add the photo to our list of photos
         photoTracker.photos.append(photo)

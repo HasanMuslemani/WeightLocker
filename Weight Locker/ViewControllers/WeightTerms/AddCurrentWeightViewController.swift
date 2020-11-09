@@ -11,6 +11,7 @@ class AddCurrentWeightViewController: UIViewController {
     
     //MARK: - Properties
     var weightTermTracker: WeightTermTracker!
+    var coreDataManager: CoreDataManager!
     var weightTermIndex: Int!
     var pickerData1: [Int] = []
     var pickerData2: [String] = []
@@ -52,12 +53,15 @@ class AddCurrentWeightViewController: UIViewController {
         print("Row: \(weightTermIndex!)")
         
         weightTermTracker.weightTermsInProgress[weightTermIndex].endWeight = weight
+        weightTermTracker.weightTermsInProgress[weightTermIndex].isCurrent = false
         
         let completedWeightTerm = weightTermTracker.weightTermsInProgress[weightTermIndex]
         
         weightTermTracker.allWeightTerms.append(completedWeightTerm)
         
         weightTermTracker.weightTermsInProgress.remove(at: weightTermIndex)
+        
+        coreDataManager.saveContext()
         
         navigationController?.popViewController(animated: true)
             

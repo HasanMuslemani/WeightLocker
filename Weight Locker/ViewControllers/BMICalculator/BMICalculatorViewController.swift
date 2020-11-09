@@ -8,9 +8,7 @@
 import UIKit
 
 class BMICalculatorViewController: UIViewController {
-    
-    //MARK: - Properties
-    
+        
     //MARK: - Outlets
     @IBOutlet weak var heightInput: UITextField!
     @IBOutlet weak var weightInput: UITextField!

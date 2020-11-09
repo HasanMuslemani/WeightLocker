@@ -23,6 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabBarController.weightTermTracker = WeightTermTracker()
         
         tabBarController.photoTracker = PhotoTracker()
+        
+        tabBarController.coreDataManager = CoreDataManager(modelName: "WeightLocker")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

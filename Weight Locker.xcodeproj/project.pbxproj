@@ -14,7 +14,7 @@
 		692B52CD253225B90067AAE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692B52CB253225B90067AAE7 /* Main.storyboard */; };
 		692B52CF253225BD0067AAE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692B52CE253225BD0067AAE7 /* Assets.xcassets */; };
 		692B52D2253225BD0067AAE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692B52D0253225BD0067AAE7 /* LaunchScreen.storyboard */; };
-		692B52E025324DD10067AAE7 /* WeightTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52DF25324DD10067AAE7 /* WeightTerm.swift */; };
+		692B52E025324DD10067AAE7 /* WeightTermOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52DF25324DD10067AAE7 /* WeightTermOld.swift */; };
 		692B52E3253251E90067AAE7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52E2253251E90067AAE7 /* TabBarController.swift */; };
 		692B52E725354F2F0067AAE7 /* AddWeightTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B52E625354F2F0067AAE7 /* AddWeightTermViewController.swift */; };
 		692B5310253A7B940067AAE7 /* WeightTermTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B530F253A7B940067AAE7 /* WeightTermTracker.swift */; };
@@ -22,12 +22,18 @@
 		692B531D253D017B0067AAE7 /* WeightTermHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B531C253D017A0067AAE7 /* WeightTermHistoryViewController.swift */; };
 		692B5320253D098B0067AAE7 /* WeightTermCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B531F253D098A0067AAE7 /* WeightTermCell.swift */; };
 		692B5324253D24910067AAE7 /* AddCurrentWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B5323253D24910067AAE7 /* AddCurrentWeightViewController.swift */; };
-		692B534B254495660067AAE7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B534A254495650067AAE7 /* Photo.swift */; };
+		692B534B254495660067AAE7 /* PhotoOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B534A254495650067AAE7 /* PhotoOld.swift */; };
 		692B5358254497E20067AAE7 /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B5357254497E20067AAE7 /* PhotosTableViewController.swift */; };
 		692B535B254499090067AAE7 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B535A254499090067AAE7 /* PhotoTableViewCell.swift */; };
 		692B535E25449F850067AAE7 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B535D25449F850067AAE7 /* AddPhotoViewController.swift */; };
 		6986E8792550C64B000BE79E /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6986E8782550C64B000BE79E /* PhotoViewController.swift */; };
 		6986E8A4255766C8000BE79E /* BMICalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6986E8A3255766C8000BE79E /* BMICalculatorViewController.swift */; };
+		6986E8AA2558B281000BE79E /* WeightLocker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6986E8A82558B281000BE79E /* WeightLocker.xcdatamodeld */; };
+		6986E8B02558B39B000BE79E /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6986E8AC2558B39B000BE79E /* Photo+CoreDataClass.swift */; };
+		6986E8B12558B39B000BE79E /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6986E8AD2558B39B000BE79E /* Photo+CoreDataProperties.swift */; };
+		6986E8B72558B54F000BE79E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6986E8B62558B54F000BE79E /* CoreDataManager.swift */; };
+		6986E8C125598A14000BE79E /* WeightTerm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6986E8C025598A14000BE79E /* WeightTerm+CoreDataProperties.swift */; };
+		6986E8C425598AD4000BE79E /* WeightTerm+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6986E8C325598AD4000BE79E /* WeightTerm+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +46,7 @@
 		692B52CE253225BD0067AAE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		692B52D1253225BD0067AAE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		692B52D3253225BD0067AAE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		692B52DF25324DD10067AAE7 /* WeightTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTerm.swift; sourceTree = "<group>"; };
+		692B52DF25324DD10067AAE7 /* WeightTermOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTermOld.swift; sourceTree = "<group>"; };
 		692B52E2253251E90067AAE7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		692B52E625354F2F0067AAE7 /* AddWeightTermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightTermViewController.swift; sourceTree = "<group>"; };
 		692B530F253A7B940067AAE7 /* WeightTermTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTermTracker.swift; sourceTree = "<group>"; };
@@ -48,12 +54,18 @@
 		692B531C253D017A0067AAE7 /* WeightTermHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTermHistoryViewController.swift; sourceTree = "<group>"; };
 		692B531F253D098A0067AAE7 /* WeightTermCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTermCell.swift; sourceTree = "<group>"; };
 		692B5323253D24910067AAE7 /* AddCurrentWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCurrentWeightViewController.swift; sourceTree = "<group>"; };
-		692B534A254495650067AAE7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		692B534A254495650067AAE7 /* PhotoOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoOld.swift; sourceTree = "<group>"; };
 		692B5357254497E20067AAE7 /* PhotosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
 		692B535A254499090067AAE7 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		692B535D25449F850067AAE7 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		6986E8782550C64B000BE79E /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		6986E8A3255766C8000BE79E /* BMICalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculatorViewController.swift; sourceTree = "<group>"; };
+		6986E8A92558B281000BE79E /* WeightLocker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeightLocker.xcdatamodel; sourceTree = "<group>"; };
+		6986E8AC2558B39B000BE79E /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		6986E8AD2558B39B000BE79E /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		6986E8B62558B54F000BE79E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		6986E8C025598A14000BE79E /* WeightTerm+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeightTerm+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		6986E8C325598AD4000BE79E /* WeightTerm+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeightTerm+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +98,11 @@
 		692B52C4253225B90067AAE7 /* Weight Locker */ = {
 			isa = PBXGroup;
 			children = (
+				6986E8A72558B244000BE79E /* CoreData */,
 				692B53522544968B0067AAE7 /* Delegates */,
 				692B5350254496270067AAE7 /* TableViewCells */,
 				692B534F2544961C0067AAE7 /* TabBarControllers */,
 				692B534E254496100067AAE7 /* ViewControllers */,
-				6986E89C2557660B000BE79E /* BMICalculator */,
 				692B534D254496060067AAE7 /* Classes */,
 				692B52CB253225B90067AAE7 /* Main.storyboard */,
 				692B52CE253225BD0067AAE7 /* Assets.xcassets */,
@@ -103,9 +115,9 @@
 		692B534D254496060067AAE7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				692B52DF25324DD10067AAE7 /* WeightTerm.swift */,
+				692B52DF25324DD10067AAE7 /* WeightTermOld.swift */,
 				692B530F253A7B940067AAE7 /* WeightTermTracker.swift */,
-				692B534A254495650067AAE7 /* Photo.swift */,
+				692B534A254495650067AAE7 /* PhotoOld.swift */,
 				690AFC1F254A14E3003967E3 /* PhotoTracker.swift */,
 			);
 			path = Classes;
@@ -114,6 +126,7 @@
 		692B534E254496100067AAE7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6986E89C2557660B000BE79E /* BMICalculator */,
 				692B5354254496C90067AAE7 /* WeightTerms */,
 				692B5355254496ED0067AAE7 /* Photos */,
 			);
@@ -174,6 +187,19 @@
 				6986E8A3255766C8000BE79E /* BMICalculatorViewController.swift */,
 			);
 			path = BMICalculator;
+			sourceTree = "<group>";
+		};
+		6986E8A72558B244000BE79E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				6986E8C325598AD4000BE79E /* WeightTerm+CoreDataClass.swift */,
+				6986E8C025598A14000BE79E /* WeightTerm+CoreDataProperties.swift */,
+				6986E8AC2558B39B000BE79E /* Photo+CoreDataClass.swift */,
+				6986E8AD2558B39B000BE79E /* Photo+CoreDataProperties.swift */,
+				6986E8A82558B281000BE79E /* WeightLocker.xcdatamodeld */,
+				6986E8B62558B54F000BE79E /* CoreDataManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,8 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6986E8B12558B39B000BE79E /* Photo+CoreDataProperties.swift in Sources */,
 				692B535B254499090067AAE7 /* PhotoTableViewCell.swift in Sources */,
-				692B534B254495660067AAE7 /* Photo.swift in Sources */,
+				692B534B254495660067AAE7 /* PhotoOld.swift in Sources */,
 				692B5316253B5DEB0067AAE7 /* WeightTermViewController.swift in Sources */,
 				690AFC20254A14E3003967E3 /* PhotoTracker.swift in Sources */,
 				692B531D253D017B0067AAE7 /* WeightTermHistoryViewController.swift in Sources */,
@@ -255,14 +282,19 @@
 				692B5310253A7B940067AAE7 /* WeightTermTracker.swift in Sources */,
 				692B52E725354F2F0067AAE7 /* AddWeightTermViewController.swift in Sources */,
 				692B535E25449F850067AAE7 /* AddPhotoViewController.swift in Sources */,
+				6986E8AA2558B281000BE79E /* WeightLocker.xcdatamodeld in Sources */,
+				6986E8B02558B39B000BE79E /* Photo+CoreDataClass.swift in Sources */,
 				692B52CA253225B90067AAE7 /* EmptyWeightTermViewController.swift in Sources */,
+				6986E8C425598AD4000BE79E /* WeightTerm+CoreDataClass.swift in Sources */,
 				6986E8792550C64B000BE79E /* PhotoViewController.swift in Sources */,
+				6986E8B72558B54F000BE79E /* CoreDataManager.swift in Sources */,
 				692B52C6253225B90067AAE7 /* AppDelegate.swift in Sources */,
 				692B5324253D24910067AAE7 /* AddCurrentWeightViewController.swift in Sources */,
 				6986E8A4255766C8000BE79E /* BMICalculatorViewController.swift in Sources */,
 				692B52C8253225B90067AAE7 /* SceneDelegate.swift in Sources */,
 				692B52E3253251E90067AAE7 /* TabBarController.swift in Sources */,
-				692B52E025324DD10067AAE7 /* WeightTerm.swift in Sources */,
+				692B52E025324DD10067AAE7 /* WeightTermOld.swift in Sources */,
+				6986E8C125598A14000BE79E /* WeightTerm+CoreDataProperties.swift in Sources */,
 				692B5320253D098B0067AAE7 /* WeightTermCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +495,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6986E8A82558B281000BE79E /* WeightLocker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6986E8A92558B281000BE79E /* WeightLocker.xcdatamodel */,
+			);
+			currentVersion = 6986E8A92558B281000BE79E /* WeightLocker.xcdatamodel */;
+			path = WeightLocker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 692B52BA253225B90067AAE7 /* Project object */;
 }

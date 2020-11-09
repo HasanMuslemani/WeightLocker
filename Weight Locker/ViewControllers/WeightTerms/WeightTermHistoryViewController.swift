@@ -6,15 +6,21 @@
 //
 
 import UIKit
+import CoreData
 
 class WeightTermHistoryViewController: UITableViewController {
     
     //MARK: - Properties
     var weightTermTracker: WeightTermTracker!
+    var coreDataManager: CoreDataManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let tabBarContr = tabBarController as? TabBarController else {return}
+        coreDataManager = tabBarContr.coreDataManager
 
+        coreDataManager.fetchWeightTerms(weightTermTracker: weightTermTracker)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,6 +33,7 @@ class WeightTermHistoryViewController: UITableViewController {
         guard let destinationVC = segue.destination as? AddCurrentWeightViewController else {return}
         
         destinationVC.weightTermTracker = weightTermTracker
+        destinationVC.coreDataManager = coreDataManager
         
         let index = tableView.indexPathForSelectedRow?.row
         destinationVC.weightTermIndex = index
@@ -77,7 +84,7 @@ class WeightTermHistoryViewController: UITableViewController {
             cell.endDateLabel.text = dateFormatter.string(from: weightTermTracker.allWeightTerms[indexPath.row].endDate)
             
             let weightTerm = weightTermTracker.allWeightTerms[indexPath.row]
-            let weightDifference = weightTerm.endWeight! - weightTerm.startWeight
+            let weightDifference = weightTerm.endWeight - weightTerm.startWeight
             
             cell.weightDifferenceLabel.text = String(weightDifference) + " lb"
             var textColor: UIColor = .gray

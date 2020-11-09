@@ -8,7 +8,7 @@
 import Foundation
 
 
-class Photo {
+class PhotoOld {
     var imageName: String
     var date: Date
     

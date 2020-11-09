@@ -11,6 +11,7 @@ class TabBarController: UITabBarController {
     
     var weightTermTracker: WeightTermTracker!
     var photoTracker: PhotoTracker!
+    var coreDataManager: CoreDataManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()

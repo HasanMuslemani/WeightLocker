@@ -7,7 +7,7 @@
 
 import Foundation
 
-class WeightTerm {
+class WeightTermOld {
     
     var startWeight: Double
     var endWeight: Double?
