@@ -75,4 +75,14 @@ class CoreDataManager {
         }
     }
     
+    func fetchPhotos(photoTracker: PhotoTracker) {
+        let fetchRequest: NSFetchRequest<Photo> = Photo.fetchRequest()
+        
+        do {
+            photoTracker.photos = try managedContext.fetch(fetchRequest)
+        } catch {
+            fatalError("Problem fetching photos \(error) : \(error.localizedDescription)")
+        }
+    }
+    
 }

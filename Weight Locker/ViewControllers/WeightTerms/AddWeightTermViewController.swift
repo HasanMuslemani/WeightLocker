@@ -73,22 +73,26 @@ class AddWeightTermViewController: UIViewController {
         let startDate = Date()
         let endDate = datePicker.date
         
-        var weightTerm = weightTermTracker.currentWeightTerm
-        
+        //check if theirs already a current weight term
+        //true = editing existing one
+        //false = creating new one
+        var weightTerm: WeightTerm! = weightTermTracker.currentWeightTerm //force unwrap since we know we are creating a new one if it's nil
         if let _ = weightTerm {}
         else {
             weightTerm = WeightTerm(context: coreDataManager.managedContext)
         }
         
-        //create the current weight term
-        weightTerm!.startWeight = weight
-        weightTerm!.endWeight = -1
-        weightTerm!.goalWeight = 0
-        weightTerm!.startDate = startDate
-        weightTerm!.endDate = endDate
-        weightTerm!.isCurrent = true
+        //set the weight term values
+        //note: we can force unwrap since we know we're setting it a value already if it's nil above
+        weightTerm.startWeight = weight
+        weightTerm.endWeight = -1
+        weightTerm.goalWeight = 0
+        weightTerm.startDate = startDate
+        weightTerm.endDate = endDate
+        weightTerm.isCurrent = true
         weightTermTracker.currentWeightTerm = weightTerm
         
+        //save the context
         coreDataManager.saveContext()
         
         //switch the navigation controllers root view controller to be the weight term view controller (previously empty weight term view controller)

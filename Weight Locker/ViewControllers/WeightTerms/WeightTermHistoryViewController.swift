@@ -78,6 +78,7 @@ class WeightTermHistoryViewController: UITableViewController {
             cell.startDateLabel.text = dateFormatter.string(from: weightTermTracker.weightTermsInProgress[indexPath.row].startDate)
             cell.endDateLabel.text = dateFormatter.string(from: weightTermTracker.weightTermsInProgress[indexPath.row].endDate)
             cell.weightDifferenceLabel.text = "---"
+            cell.weightDifferenceLabel.textColor = .gray
             
         } else {
             cell.startDateLabel.text = dateFormatter.string(from: weightTermTracker.allWeightTerms[indexPath.row].startDate)
@@ -86,7 +87,7 @@ class WeightTermHistoryViewController: UITableViewController {
             let weightTerm = weightTermTracker.allWeightTerms[indexPath.row]
             let weightDifference = weightTerm.endWeight - weightTerm.startWeight
             
-            cell.weightDifferenceLabel.text = String(weightDifference) + " lb"
+            cell.weightDifferenceLabel.text = String(format: "%.1f", weightDifference) + " lb"
             var textColor: UIColor = .gray
             
             if(weightDifference > 0) {

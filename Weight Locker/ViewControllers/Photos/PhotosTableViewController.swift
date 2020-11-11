@@ -11,6 +11,7 @@ class PhotosTableViewController: UITableViewController {
     
     //MARK: - Properties
     var photoTracker: PhotoTracker!
+    var coreDataManager: CoreDataManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +19,12 @@ class PhotosTableViewController: UITableViewController {
         //get the tab bar controller
         guard let tabBarContr = tabBarController as? TabBarController else {return}
         
+        //get the values from the tab bar controller
         photoTracker = tabBarContr.photoTracker
+        coreDataManager = tabBarContr.coreDataManager
+        
+        //fetch all the photos that are saved in the context
+        coreDataManager.fetchPhotos(photoTracker: photoTracker)
         
     }
     
@@ -34,6 +40,7 @@ class PhotosTableViewController: UITableViewController {
             
             //pass the photo tracker to the add photo view controller
             addPhotoVC.photoTracker = photoTracker
+            addPhotoVC.coreDataManager = coreDataManager
         } else if(segue.identifier == "viewPhoto") {
             guard let photoVC = segue.destination as? PhotoViewController else {return}
             
