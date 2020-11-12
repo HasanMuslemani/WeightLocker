@@ -22,6 +22,9 @@ class BMICalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        weightInput.delegate = self
+        heightInput.delegate = self
+        
         //give calculate button corner radius
         calculateButton.layer.cornerRadius = 15
         
@@ -145,5 +148,16 @@ class BMICalculatorViewController: UIViewController {
         resultAmount.text = amount
     }
     
+}
+
+//MARK: - TextField Delegate
+extension BMICalculatorViewController: UITextFieldDelegate {
     
+    //return key pressed
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //hide keyboard for both inputs
+        weightInput.resignFirstResponder()
+        heightInput.resignFirstResponder()
+        return true
+    }
 }
