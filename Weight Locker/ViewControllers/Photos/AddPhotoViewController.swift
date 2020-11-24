@@ -34,6 +34,22 @@ class AddPhotoViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func submitClicked(_ sender: Any) {
+        if(imageName == "") {
+            //create alert controller to notify user an image is required
+            let ac = UIAlertController(title: "Image Required", message: "An image is required to add a new photo", preferredStyle: .alert)
+            
+            //create action to close alert
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            //add the action to close alert
+            ac.addAction(cancelAction)
+            
+            //show alert
+            present(ac, animated: true)
+            
+            return
+        }
+        
         //get the date from the date picker
         let date = datePicker.date
         
