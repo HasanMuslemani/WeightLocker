@@ -17,9 +17,11 @@ class WeightTermHistoryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //get our custom tab bar controller
         guard let tabBarContr = tabBarController as? TabBarController else {return}
         coreDataManager = tabBarContr.coreDataManager
 
+        //fetch all the weight terms from core data context
         coreDataManager.fetchWeightTerms(weightTermTracker: weightTermTracker)
     }
     
@@ -30,13 +32,28 @@ class WeightTermHistoryViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //get the view controller we're going to
         guard let destinationVC = segue.destination as? AddCurrentWeightViewController else {return}
         
+        //pass the values to the new view controller
         destinationVC.weightTermTracker = weightTermTracker
         destinationVC.coreDataManager = coreDataManager
         
         let index = tableView.indexPathForSelectedRow?.row
         destinationVC.weightTermIndex = index
+        
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        //get the index path for the row clicked
+        guard let indexPath = tableView.indexPathForSelectedRow else { return true }
+        
+        //check which section the row clicked is in
+        if indexPath.section == 0 {
+            return true
+        } else {
+            return false
+        }
         
     }
     
@@ -102,6 +119,10 @@ class WeightTermHistoryViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

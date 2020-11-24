@@ -124,7 +124,7 @@ class AddWeightTermViewController: UIViewController {
 //MARK - Picker View Data Source
 extension AddWeightTermViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+        return 3
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -134,6 +134,8 @@ extension AddWeightTermViewController: UIPickerViewDataSource {
                 return pickerData1.count
             case 1:
                 return pickerData2.count
+            case 2:
+                return 1
             default:
                 return 0
         }
@@ -149,13 +151,18 @@ extension AddWeightTermViewController: UIPickerViewDelegate {
                 return String(pickerData1[row])
             case 1:
                 return pickerData2[row]
+            case 2:
+                return "lb"
             default:
                 return nil
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-        return 75
+        if(component == 2) {
+            return 30
+        }
+        return 60
     }
 
 }
