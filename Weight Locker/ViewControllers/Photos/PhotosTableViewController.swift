@@ -88,6 +88,12 @@ class PhotosTableViewController: UITableViewController {
         //set the cell's image to be the photo's image by creating a new image from our image's path
         cell.photo.image = UIImage(contentsOfFile: imagePath.path)
         cell.photo.layer.cornerRadius = 3
+        
+        cell.transform = CGAffineTransform(translationX: 0, y: cell.contentView.frame.height)
+        
+        UIView.animate(withDuration: 0.5, delay: 0.05 * Double(indexPath.row)) {
+            cell.transform = CGAffineTransform(translationX: cell.contentView.frame.width, y: cell.contentView.frame.height)
+        }
 
         return cell
     }

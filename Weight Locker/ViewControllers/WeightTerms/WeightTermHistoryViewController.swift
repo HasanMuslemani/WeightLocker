@@ -119,6 +119,12 @@ class WeightTermHistoryViewController: UITableViewController {
             
         }
         
+        cell.alpha = 0
+        
+        UIView.animate(withDuration: 0.7, delay: 0.05 * Double(indexPath.row)) {
+            cell.alpha = 1.0
+        }
+        
         return cell
     }
     
