@@ -31,6 +31,8 @@ class WeightTermHistoryViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    //MARK: - Methods
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //get the view controller we're going to
         guard let destinationVC = segue.destination as? AddCurrentWeightViewController else {return}
@@ -54,7 +56,6 @@ class WeightTermHistoryViewController: UITableViewController {
         } else {
             return false
         }
-        
     }
     
     // MARK: - Table view data source
@@ -120,6 +121,34 @@ class WeightTermHistoryViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        //swipe to delete
+        if(editingStyle == .delete) {
+            //check if its weight term in progress or a completed weight term
+            if(indexPath.section == 0) {
+                //delete the weight term from the core data context
+                let weightTermToDelete = weightTermTracker.weightTermsInProgress[indexPath.row]
+                coreDataManager.managedContext.delete(weightTermToDelete)
+                coreDataManager.saveContext()
+                
+                //remove the weight term from the table view and tracker
+                weightTermTracker.weightTermsInProgress.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } else if(indexPath.section == 1) {
+                //delete the weight term from the core data context
+                let weightTermToDelete = weightTermTracker.allWeightTerms[indexPath.row]
+                coreDataManager.managedContext.delete(weightTermToDelete)
+                coreDataManager.saveContext()
+                
+                //remove the weight term from the table view and tracker
+                weightTermTracker.allWeightTerms.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        }
+    }
+    
+    //MARK: - TableView Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

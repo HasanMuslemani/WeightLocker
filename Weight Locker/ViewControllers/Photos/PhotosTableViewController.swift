@@ -101,6 +101,11 @@ class PhotosTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         //checks if the user is trying to delete
         if(editingStyle == .delete) {
+            //remove the photo from core data context
+            let photoToDelete = photoTracker.photos[indexPath.row]
+            coreDataManager.managedContext.delete(photoToDelete)
+            coreDataManager.saveContext()
+            
             //remove the photo from our tracker and table view
             photoTracker.photos.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
