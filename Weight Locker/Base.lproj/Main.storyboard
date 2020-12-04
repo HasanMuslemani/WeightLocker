@@ -59,8 +59,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your current weight and the date you'd like the term to end" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEe-Rw-7PK">
+                                <rect key="frame" x="26" y="10" width="323" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wXW-wL-UPF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="442"/>
+                                <rect key="frame" x="0.0" y="51" width="375" height="442"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2T-HY-FIz">
                                         <rect key="frame" x="27.5" y="0.0" width="320" height="216"/>
@@ -73,10 +79,10 @@
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVD-08-jxB">
-                                <rect key="frame" x="0.0" y="442" width="375" height="132"/>
+                                <rect key="frame" x="0.0" y="493" width="375" height="81"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtU-4O-GPa">
-                                        <rect key="frame" x="100" y="41" width="175" height="50"/>
+                                        <rect key="frame" x="100" y="15.5" width="175" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.27450980392156865" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="8CH-sg-1pB"/>
@@ -123,12 +129,15 @@
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Vgi-4p-e0b" firstAttribute="trailing" secondItem="vVD-08-jxB" secondAttribute="trailing" id="08B-hP-SBt"/>
+                            <constraint firstItem="FEe-Rw-7PK" firstAttribute="leading" secondItem="g6v-0Q-Avx" secondAttribute="leadingMargin" constant="10" id="CT6-Zu-g2N"/>
                             <constraint firstItem="vVD-08-jxB" firstAttribute="top" secondItem="wXW-wL-UPF" secondAttribute="bottom" id="Cpv-pZ-OMe"/>
+                            <constraint firstItem="FEe-Rw-7PK" firstAttribute="top" secondItem="g6v-0Q-Avx" secondAttribute="topMargin" constant="10" id="Crt-H8-WaY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FEe-Rw-7PK" secondAttribute="trailing" constant="10" id="KGc-8I-5gR"/>
                             <constraint firstItem="wXW-wL-UPF" firstAttribute="leading" secondItem="Vgi-4p-e0b" secondAttribute="leading" id="TbJ-gP-kzq"/>
                             <constraint firstItem="vVD-08-jxB" firstAttribute="leading" secondItem="Vgi-4p-e0b" secondAttribute="leading" id="WWe-Pz-qFk"/>
                             <constraint firstItem="Vgi-4p-e0b" firstAttribute="bottom" secondItem="vVD-08-jxB" secondAttribute="bottom" id="Yc4-cb-UbX"/>
                             <constraint firstItem="Vgi-4p-e0b" firstAttribute="trailing" secondItem="wXW-wL-UPF" secondAttribute="trailing" id="kNQ-V9-aHb"/>
-                            <constraint firstItem="wXW-wL-UPF" firstAttribute="top" secondItem="Vgi-4p-e0b" secondAttribute="top" id="ypa-aa-zuP"/>
+                            <constraint firstItem="wXW-wL-UPF" firstAttribute="top" secondItem="FEe-Rw-7PK" secondAttribute="bottom" id="ypa-aa-zuP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Weight Term" id="lIS-Vr-G4x"/>
